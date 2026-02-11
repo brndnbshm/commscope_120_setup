@@ -155,6 +155,19 @@ def select_pad(
 
 #function for return equalization and padding
 
+def select_return_pad(
+    user_reverse: float,
+    reverse_gain: float,
+    target_reverse: float = 38.0
+) -> tuple[int, float]:
+    reverse_raw = user_reverse - reverse_gain
+    pad = max(0, int(round(target_reverse - reverse_raw)))
+    reverse_final = reverse_raw + pad
+
+    return pad, reverse_final
+
+
+
 
 
 

@@ -27,22 +27,36 @@ def welcome_message() -> None:
 
 def install_message() -> None:
     print(r"""
-     --------------------------------------------Install the Following Plug-Ins-----------------------------------------   
+     ------------------------------------Install the Following Forward Plug-Ins-----------------------------------------   
     """)
 
-def balance_message() -> None:
+def balance_forward_message() -> None:
     print(r"""
     ------------------------------Place Amplifier in Manual, Max Out Manual Potentiometer-------------------------------
     """)
 
-def adu_message() -> None:
+def manual_message() -> None:
     print(r"""
     ---------------------------------------Back Off Manual Potentiometer by 4dB-----------------------------------------
     """)
-
+def adu_message() -> None:
+    print(r"""
+    ------------------------------Place Jumper in Auto Position, Tweak ADU to Match Desired Outputs---------------------
+    """)
 def balance_return_message() -> None:
     print(r"""
-     -------------------------------------------Now Let's Balance Our Return--------------------------------------------   
+     -------------------------------------Install the Following Reverse Pads--------------------------------------------   
     """)
+
+def sre_message() -> None:
+    print(r"""
+    ------------------------------------------Adjust Return Tilt as Necessary-------------------------------------------
+    """)
+def pause(message: str = "\nPress Enter to continue...") -> None:
+    input(message)
+
+import time
+def short_pause(seconds: float = 3) -> None:
+    time.sleep(seconds)
 
 

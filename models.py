@@ -14,9 +14,9 @@ class LineExtender:
 
 @dataclass
 class MiniBridger:
-    gain_low: float
-    gain_high: float
-    gain_reverse: float
+    gain_low: float = 36.00
+    gain_high: float = 46.30
+    gain_reverse: float = 17.50
     adu_backoff: float = 4.50
     name: str = "MB120"
     target_input: float = 6.00
